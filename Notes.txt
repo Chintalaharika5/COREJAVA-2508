@@ -1,0 +1,157 @@
+4th June
+==========
+
+--> Install Java (JDK) 21 LTS
+    > java --version 
+    > java -version (older)
+
+    > javac
+
+--> Install VS CODE (IDE)
+    > Easy Code Management
+
+--> We need class with body to begin with java program
+    -> main method is must for running any java program
+
+    -> Syntax:
+        public static void main(String[] args) {
+
+        }
+
+        -> public - access specifier
+        -> static - keyword for indicating no need of OBJECT
+        -> void - keyword for indicating no retrun value
+        -> main - method name
+        -> (String[] args) - method argument 
+        -> { } - method body
+
+--> Order of Working:
+    -> Write: Write the Java Program using JDK
+    -> Compile: Compile the Java Program using JDK(javac)
+    -> Run: Using JVM (part of JRE), run the byte code.
+
+6th June
+========
+
+    --> Variables
+
+        -> Variables are names of memory locations
+        -> Variables are used to store Data
+        -> Variables will be processed(read/update/delete) using programs
+
+    -> Variables Syntax
+        -> datatype variable_Name = value;
+
+    --> Data Types
+
+        -> Data Types define the Type of data and size for the data.
+
+        -> Data Types Classification
+            -> Primitive Data Types
+            -> Non-Primitive Data Types (Reference Data Types)
+
+        -> Primitive Data Types
+            -> We Have 8 Primitive Data Types
+
+                1: byte
+                2: short
+                3: int
+                4: long
+                5: float
+                6: double
+                7: char
+                8: boolean
+
+    
+9th June
+========
+
+    -> Declaration & Initialization
+
+        -> Declaration: Creat  ion of variable with datatype
+            -> int number;
+
+        -> Initialization: Assigning a value to variable
+            -> number = 10;
+
+        -> Previous Session
+            -> int number = 10; // Declaration & Initialization
+
+
+    -> Concatenation
+
+        -> Comibining two or more strings together
+        -> Comibining other datatypes with strings
+
+        -> Concatenation Operator (+)
+            -> Strings
+        -> Arithmetic Operator (+) 
+            -> numeric operands
+
+
+    -> Type Conversion & Type Casting
+
+        -> Type Conversion: Converting one datatype to another datatype AUTOMATICALLY by java compiler
+
+            -> NO DATA LOSS --> Type Conversion is considered SAFE
+
+            -> SMALL To BIG (WIDENING)
+
+            -> Handled by Java Compiler
+
+        -> Type Casting: Converting one datatype to another datatype MANUALLY/EXPLICITLY by developer    
+
+            -> DATA LOSS MIGHT OCCUR --> Type Casting is considered NOT SAFE
+
+            -> BIG To SMALL (NARROWING)
+
+            -> Handled by developer
+                -> specify the data type (parantheses/datatype)
+
+11th June
+========
+
+    -> Operators In Java
+
+        -> What is it ?
+
+            -> Special Symbols that would perform operations/calculations on Variables & Values
+
+        -> Why we need it ?
+
+            -> Perform calculations like Arithmetic, Logical, Comparisions etc
+
+        -> Types Of Operators
+
+            -> Arithmetic + - * / %
+            -> Increment / Decrement ++ / --
+                -> pre-increment / Decrement
+                -> post-increment / Decrement
+            -> Assignment 
+                -> a + 5 = a 
+                -> a += 5 (concise form)
+                -> Arithmetic + - * / % (applicable)
+                -> = 
+                -> +=
+                -> -=
+                -> *=
+                -> /=
+                -> == (equality)
+            -> Comparision / Relational
+                -> == 
+                -> !=     
+                -> >
+                -> <
+                -> >=
+                -> <=
+            -> Logical (combine multiple conditions) 
+                -> && (AND)
+                -> || (OR)
+                -> !  (NOT)
+            -> Bitwise (Binary Bits Cal)
+                -> & (AND) -> Sets each bit to 1 if both bits are 1
+                -> | (OR)  -> Sets each bit to 1 if one of bits is 1
+                -> ^ (XOR) -> Sets each bit to 1 if only one of the bits is 1
+                -> ~ (NOT) -> Inverts all the bits 
+                -> << (LEFT SHIFT) --> shifts the bits to left, filling with zeros 
+                -> >> (RIGHT SHIFT) --> shifts the bits to right, preserving the bits 
