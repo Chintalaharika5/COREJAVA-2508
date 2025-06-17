@@ -1,4 +1,4 @@
-package LOOPS;
+package fifth;
 
 public class DEMO {
     public static void main(String[] args) {
