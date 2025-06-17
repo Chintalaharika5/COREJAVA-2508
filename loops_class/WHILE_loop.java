@@ -1,4 +1,4 @@
-package fifth;
+package loops_class;
 
 public class WHILE_loop {
         public static void main(String[] args) {
