@@ -1,4 +1,4 @@
-package loops_class;
+package fifthclass;
 
 import java.util.Scanner;
 

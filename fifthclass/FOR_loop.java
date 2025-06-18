@@ -1,4 +1,4 @@
-package loops_class;
+package fifthclass;
 
 public class FOR_loop {
     public static void main(String[] args) {
