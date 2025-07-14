@@ -17,9 +17,9 @@ public class ProductInfo_Problem2 {
         System.out.println("Product Name: " + productName);
         System.out.println("Rating: " + rating + " stars");
         System.out.println("Number of Ratings: " + ratingCount);
-        System.out.println("MRP: ₹" + mrp);
+        System.out.println("MRP: " + mrp);
         System.out.println("Discount: " + discountPercent + "%");
-        System.out.println("Selling Price: ₹" + sellingPrice);
+        System.out.println("Selling Price: " + sellingPrice);
         System.out.println("Available Sizes: " + size1 + ", " + size2 + ", " + size3 + ", " + size4);
     }
     

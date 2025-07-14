@@ -303,6 +303,628 @@
     -> TASK -> Check Attendance Status: (Conditionals)     
 
     -> TASK Fix below issues 
-        -> Why Student name is not being taken
+        -> Why Student name is not being taken (new line is being used as Student Name)
+                -> Read new line using nextLine()
         -> Instead of taking a character like (y/n), take the whole word like yes or no YES / NO 
             and ask Student to continue or not
+                -> String continueInput = "yes"
+                -> while (continueInput.equals("yes") || continueInput.equals("YES") || continueInput.equals("Yes"))
+
+18th June - OOPS
+=================
+
+    -> Classic issues when using Scanner Class Methods
+
+    -> When switching between nextInt() / nextDouble() and nextLine()
+
+    -> new line is represented using \n
+
+    -> Programming paradigms
+
+        -> Imperative: Focus is on HOW TO DO SOMETHING -> Java, Python, JS etc
+
+            -> Object Oriented
+
+        -> Declarative: Focus is on WHAT TO DO  -> SQL, NO-SQL, HTML, CSS etc
+
+            -> Functional Oriented
+
+    -> Object Oriented Programming
+
+        -> We use classes & Objects, to design a program which will use some data & behaviour to solve real world problems
+
+        -> OOPS Concepts (Java, Python, JS, C# etc)
+
+            -> Classes
+            -> Objects
+            -> Inheritance
+            -> Encapsulation
+            -> Polymorphism
+            -> Abstraction
+
+        -> What is an Object ?
+            -> Instance of a Class
+            -> TV is an Object
+                -> Object Data - Brand, Size, Model, DisplayType etc
+                -> Object Behaviours - WatchMovies, Play Games, Play Sound etc
+            -> Why should i create an object ? 
+                -> To allocate memory
+            -> To allocate memory, do we have any other approach, apart from creating object ?
+                -> we use static keyword
+
+            -> Syntax:
+                ClassName objectName = new ClassName(); 
+                   
+
+        -> What is a Class ?
+            -> Blueprint Of an Object
+
+            -> Why should i create a Class ? 
+                -> To group similar/common kind of Data & Behaviours in one place i.e class
+
+            -> Syntax:
+                class ClassName {
+                    
+                }     
+
+        -> Example
+            -> TV is Class { Data & Behaviours }
+               String tvBrand
+               String tvModel 
+               int tvSize
+
+            -> KodadkTV is Object 
+                tvBrand for KodadkTV is Kodak
+                tvModel for KodadkTV is KDK-43-KIOP
+                tvSize for KodadkTV is 43
+
+            -> LgTV is Object   
+
+            -> SonyTV is Object 
+
+        -> What is an Method ?   
+            -> A block of code that performs a task
+
+            -> Inside a class what represents a method ? 
+                -> Behaviour
+
+            -> Why should i create a Method ? 
+                -> To do a task   
+
+            -> Syntax:
+                access_modifier void/returnType methodName() {
+
+                }
+
+        -> TASK : Implement CAR EMI CALCULATION
+
+        -> TASK : Implement LMS Project 5 
+
+20th June - Methods
+===================
+
+    -> Syntax:
+
+        access_modifier static/non-static void/returnType methodName(parameteres....) throw Excpetions {
+            return values;
+        }
+
+    -> TASK : Based On Project 4 apply the average score as sorce for performanceScoreCredits()
+        
+23rd June - Constructors
+========================
+
+    -> What are Methods ?
+
+        -> Block of code to perform TASK
+    
+    -> What are Constructors ?
+
+        -> Block of code to perform INITILIZATION OF DEFAULT VALUES FOR OBJECTS
+
+    -> How do you call methods ?
+
+        -> Create Object(obj) -> obj.method();
+
+    ->  How do you call Constructor ?
+
+        -> Whenever you create an Object, Constructor is called AUTOMATICALLY
+        -> No need to call Constructor EXPLICITLY or Constructor are called IMPLICITLY
+
+    -> Rules for Constructors (Unlike Methods)
+
+        -> Name of the Constructor, should be SAME as CLASS NAME
+
+        -> No RETURN TYPE not even VOID allowed
+
+        -> Calling Constructors is not required
+
+    -> When we already have methods, why Constructors ?
+
+        -> To Initialize default values
+
+        -> Overloading Flexibility
+
+    -> Types Of Constructors
+
+        -> Default Constructor(No-Arg / Non-parameterized)
+
+            -> ClassName() { }
+
+        -> parameterized Constructor
+
+            -> ClassName(int id) { }
+
+
+        -> When creating an object if the Constructor has parameteres, then its must to create
+            Constructor with those parameteres
+
+        -> When creating an object if the Constructor has parameteres, and you trying to create
+            an object without parameteres, then creating default Constructor is MUST
+
+    -> this keyword
+
+        -> this keyword is used to refer CURRENT CLASS OBJECT
+
+        -> To avoid ambugity between local variables and instance variables, we can use this
+    
+        -> To differentaite between local variables and instance variables, we can use this
+
+    -> Constructor Overloading
+
+        -> When we define multiple Constructors with SAME NAME, but different number of 
+        parameteres, different Type of parameteres, different order for parameteres
+
+        -> Why ?
+            -> Constructor Overloading is used, when creating OBJECTS with VARYING INITILIZATIONS
+
+
+25th June - Constructors - LMS
+==============================
+
+    -> this() --> Constructor call
+
+    -> this() used to call a Constructor inside another Constructor of same class.
+
+    -> Arrays
+
+        -> Variable : Store data with only one Value
+
+        -> Array : Store data with MULTIPLE VALUES
+
+        -> Is java 100 % Object Orineted ?
+            int x = 10; // java is not 100 % Object Orineted
+
+            Int x = new Int(10); // java 100 % Object Orineted, BUT IT DOESN'T SUPPORT
+
+        -> Types Of Arrays 
+
+            -> Single Dimensional Array
+
+                -> Syntax:
+                    datatype [] variable_Name = new datatype [size];
+
+                    NOTE: Size is FIXED in arrays, you cannot EXPAND nor SHRINK
+
+                -> Index : index helps you access or assign data inside an Array
+                           index starts from 0
+
+                -> If you go beyond the size we get Exceptions (ArrayIndexOutOfBoundExcpetion)    
+
+                -> All the elements in an array should be of SAME DATA TYPE    
+
+                -> [1 2 3 4]    
+
+            -> Multi Dimensional Array
+
+                -> Multi Dimensional Arrays have both X & Y Axis, unlike Single Dimensional Arrays
+                    which has only X Axis
+
+                 -> [1 2 3 4]
+                    [5 6 7 8]
+
+                -> Syntax:
+                    datatype [][] variable_Name = new datatype [rows][columns];
+
+                    int [][] twoDArray = new int [3][3];
+                    int [][][] threeDArray = new int [3][3][3];
+
+                    NOTE: if rows and columns are equal we call them as Multi Dimensional Arrays
+
+                    NOTE: if rows and columns are not equal we call them as Jagged Arrays
+                        int [][] jaggedArray = new int [2][5];
+
+
+27th June - Arrays - LMS
+========================
+
+    -> LAB For Arrays
+
+    -> Strings (package - ten)
+
+        -> String - Sequence Of Characters, which is a NON-PRIMITIVE Data type.
+
+        -> Strings are MOST WIDELY USED datatypes in Java / Other Programming Languages.
+
+        -> Strings are IMMUTABLE in nature, IMMUTABLE(CANNOT CHANGE ONCE CREATED)
+
+        -> Strings as LITERALS
+
+            -> Strings can serve as a datatype and also as a class, which is UNIQUE Behaviour
+
+        -> String Concatenation
+
+            -> Using + to combine multiple strings    
+    
+        -> Different Ways to Create Strings in Java
+
+            -> Using String Literals
+                
+                String name = "Hello";
+
+                NOTE: When we use Literals, we are Assigning same memory block, if the content is 
+                same
+
+            -> Using new keyword
+
+                String email = new String ("ravi2krishna@gmail.com"); 
+
+                NOTE: When we use new keyword, everytime a new memory block assigned, regardless the
+                content is 
+                same or not.
+
+            -> When using Primitive like int, float etc == does compare values    
+
+            -> When using Strings == does compares memory addressess
+
+            -> Compare the values of Strings, then use equals()
+
+            -> String Pool / String Constant Pool
+
+                -> An address pool where common string literals are stored and given same memory address
+                
+
+30th June - String - String Buffer - String Builder
+===================================================
+
+    -> Strings (package - ten)
+
+    -> Strings are IMMUTABLE in nature, IMMUTABLE(CANNOT CHANGE ONCE CREATED)
+
+    -> Why we need Strings to be Mutable ?
+
+        -> You want to update.
+
+        -> We can improve PERFORMANCE
+
+    -> To overcome above issues we can use  String Buffer & String Builder
+
+        -> When we do manipulations/changes on String Buffer & String Builder, we don't create
+        new object every time, like in Strings.
+
+        -> String is like Pen & Paper 
+
+        -> String Buffer & String Builder is like Marker & WhiteBoard
+
+    -> Comparison
+
+                        Can modify          Creates new object ?              When To Use ?
+
+    -> Strings              NO                    YES                          NO CHANGES    
+
+    -> String Buffer        YES                    NO                          MANY CHANGES
+
+    -> String Builder       YES                    NO                          MANY CHANGES 
+
+    -> Performance          SLOW(String)          SLOW                         FAST 
+                                            (Due To Synchronization)        (Due To NO Synchronization)
+                                             (String Buffer)                    (String Builders)
+                                             (Multi Threaded)                   (Single Threaded)  
+
+    -> Time taken using Strings: 72 ms
+    -> Time taken using StringBuilder: 3 ms
+    -> Time taken using StringBuffer : 0 ms        
+
+
+    -> Static & Non-Static
+
+        -> To understand from Memory Management Perspective We need to understand static & non-static
+
+        -> Here will understand when to static and when to use non-static
+
+        -> So in class we can have Variables, Methods, Constructors & BLOCKS
+
+        -> The Concept of static came, with a basic design principal of running java program
+
+            -> What is must to run java program ?
+
+                -> main method is must
+                -> type of main method ? 
+                    -> static
+
+        -> How many ways can we allocate memory ?   
+
+            -> Using new keyword i.e object creation
+
+            -> Using static keyword    
+
+        -> NOTE: Whenever java sees static keyword, in your code, JVM will IMPLICITLY assign MEMORY 
+            without OBJECT CREATION
+
+        -> Method Area
+
+            -> Will Store Class Level Data(Static) static methods & static variables    
+
+            -> Here Memory allocation is done, when we use "static" keyword
+
+        -> Heap Area
+
+            -> Will Store Object Data (Non-Statics)
+
+            -> Here Memory allocation is done, when we use "new" keyword
+
+
+2nd July - Static & Non-Static
+===============================
+
+    -> Non-Static Variables (Instance Variables) (package - eleven)
+
+        -> Variables defined inside the class, but outside the method without static keyword
+
+        -> They are UNIQUE to each Object
+
+    -> Static Variables
+
+        -> Variables defined inside the class, but outside the method using static keyword
+
+        -> They are COMMON/STATIC to each Object 
+
+        -> While Accessing Static Variables, Recommended to use ClassName.variable_Name
+
+
+    -> Static & Non-Static BLOCKS
+
+        -> Static Blocks
+
+            -> Static Block in java is a block of code, gets executed when CLASS IS LOADED into memory by JVM
+
+            -> Used for Initializing Static Variables
+
+            -> Configuration data that should load even before main method execution
+
+
+        -> Non-Static BLOCKS
+
+            -> Non-Static Block in java is a block of code, gets executed when OBJECT IS CREATED
+
+            -> Used for Initializing Non-Static/Instance Variables (Constructors) 
+
+            -> Constructors Internally use Non-Static Block only for Initialization
+
+
+    -> Inheritance
+
+        -> Inheritance - Genes / Properties(land) 
+
+            -> If yor parent has some Traits/Properties, you may or may not inherit those Traits/Properties
+
+            -> In Programming Context, Inheritance means acquiring Properties and Behaviors from 
+            existing Parent Classes.
+
+            -> Why To Inherit ?
+
+                -> REUSE (Properties and Behaviors)
+
+             -> When To Inherit ?
+
+                -> When the Relationship is POSITIVE (Additional Benefits)
+
+            -> When Inheritance is applied, Child can get Parent Features, but NOT VICE VERSA  
+
+            -> If you want to create a Relationship between classes, we need to use "extends" keyword
+            and also "implements" keyword
+
+        -> Types Of Inheritance
+
+              -> Based on the requirement, you can apply different types of Inheritance techniques
+
+                -> Single Inheritance
+                -> Multi Level Inheritance
+                -> Hierarchial Inheritance  
+                -> Multiple Inheritance (*) --> Supports only for Interfaces
+                -> Hybrid Inheritance (Optional)
+
+4th July - Inheritance Types
+============================
+
+    -> Single Inheritance
+
+        -> A class inherits from a Single Class(Single Parent)
+
+        -> A -> B (Class A extends Class B)
+
+    -> Multi Level Inheritance
+
+        ->  A class inherits from another class, which in turn inherits from another class
+
+        -> A -> B -> C ... (Class A extends Class B extends Class C .....)   
+
+    -> Hierarchial Inheritance  
+
+        -> Multiple Classes inherit from Same Superclass
+
+           |---> B 
+        -> A --> C
+           | --> D 
+
+    -> Multiple Inheritance  
+
+        -> One class inherits from multiple parents
+
+        -> A   B 
+           |-C-|
+
+        -> This Features is not supported by Java with Classes, but Supports using INTERFACES 
+
+        -> Interface
+
+            -> An Interface Contains Abstract Methods i.e methods without implementation(body)
+
+                -> Abstract Method : public void methodName();     
+
+            -> To achieve Multiple Inheritance using Interfaces we use "implements" keyword
+
+    -> super keyword
+
+        -> super keyword is used to refer parent class attributes
+
+            -> Parent Class Methods, Variables, Constructors
+
+
+
+    -> Encapsulation
+
+        -> Hiding Data (Variables)
+
+        -> To achieve Encapsulation we need to know about Access Modifiers
+
+        -> Access Modifiers
+
+            -> Access Modifiers are keywords which will control VISIBILITY/ACCESS of classes, methods
+             variables
+
+            -> List Of Access Modifiers
+
+                -> public  
+                -> private
+                -> protected 
+                -> default
+
+            -> If you understand Access Modifiers from Variables Perspective, the same is applied
+            for methods, Constructors and classes, with below conditions
+
+                NOTE: Top level classes can only be public and default
+
+7th July - Encapsulation
+========================
+
+    -> Access Modifiers with Classes
+
+        -> Top level classes Supports only
+
+            -> public
+            -> default (no modifier) : We should not use default explicitly
+
+        -> Inner classes support all access modifiers
+
+
+    -> Encapsulation
+
+        -> Hiding Data (Variables)
+
+        -> Encapsulation describes an ability of an object to hide its data
+
+        -> Class is the best example for Encapsulation
+
+            -> Class holds variable & methods
+        
+        -> How to hide the data ? How to enforce the data should not be accessible directly ?
+
+            -> Private access modifier, lets you access/change only within the same class
+
+            -> Once you made data private, we can only use some SPECIAL METHODS
+
+                -> Setters Methods 
+
+                    -> Set/Modify the data 
+
+                -> Getters Methods  
+
+                    -> Get/Access the data 
+
+        ->  Constructors vs Setters
+
+            -> Quick Initialization         Constructors Better      Setters need additional steps
+
+            -> Validation Checks            Not possible             Yes we can 
+
+            -> Logging / Debugging          Not possible             Yes we can 
+
+            -> Scalability                  Becomes Messy when       Clean & Maintainable   
+                                            we have lot of fields   
+
+            -> Real World Systems           Simple Projects          Enterprise Level                       
+
+
+9th July - Abstraction
+======================
+
+    -> Abstraction
+
+        -> Hiding Implementation (Methods)
+
+        -> To achieve Abstraction we need to know about Interfaces in through
+
+    -> Interfaces
+
+        -> OLD - Interfaces have Abstract Methods
+
+        -> New - Blueprint for a Class, Contains Abstract Methods and Constants(Data)
+
+        -> In layman terms you can consider Interface as CONTRACT between PARTIES
+
+            -> CONTRACT : Rules / Guidelines
+
+        -> In Interface if we add new Abstract methods, then all the Previously implemented
+        classes with have errors, if they don't Implement new Abstract methods.
+
+        -> From Java 8, we can provide methods(implementations) like below
+
+            -> Default methods
+
+                -> Methods that has default implementation already provided by vendor
+
+                -> Default methods are allowed only in interfaces
+
+            -> Static methods
+
+                -> Methods that belong to interface and can be called directly with Interface name
+
+
+     -> Abstract Classes
+
+        -> Abstract classes, are declared using abstract keyword
+
+        -> Abstract Classes, can have Abstract Methods and Concrete Methods
+
+        -> Before Java 8, we used abstract classes, if new implementations are added in interfaces
+
+        -> NOTE: Abstract Classes we cannot create Objects
+
+        -> If we use abstract classes, we cannot Implement like Interface
+
+        -> Use case : Abstract Classes are used when classes share common behavior and 
+        some methods require specific implementation in sub classes
+
+    
+11th July - Abstraction LAB
+===========================
+
+    -> Implement LMS with Abstraction
+
+14th July - Polymorphism
+========================
+
+    -> Polymorphism enables an entity(methods), to take MULTIPLE FORMS.
+
+    -> Types Of Polymorphism
+
+        -> Compile Time Polymorphism
+
+            -> Occurs with method overloading during compile time
+
+        -> Runtime Time Polymorphism
+
+            -> Occurs with method overriding during run time
+
+            

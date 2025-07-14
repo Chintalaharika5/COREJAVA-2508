@@ -7,7 +7,7 @@ package fifthclass;
 
 import java.util.Scanner;
 
-public class Scanner_Demo {
+public class Scanner_DEMO {
     public static void main(String[] args) {
         // Prompt a user for his ID & NAME
         Scanner input = new Scanner(System.in);
